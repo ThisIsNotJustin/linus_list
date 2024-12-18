@@ -16,6 +16,11 @@ size_t size(List *l);
 
 void insert(List *l, Node *before, Node *item);
 
-void pop(List *l, Node *target);
+// CS 101 pop
+// void pop(List *l, Node *target);
+
+Node *pop(Node *node, Node *entry);
+
+void pop_list(List *l, Node *entry);
 
 #endif // LINUS_LIST_H

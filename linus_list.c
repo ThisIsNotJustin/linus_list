@@ -43,6 +43,21 @@ Node *pop(Node *node, Node *entry) {
 }
 
 /**
+ * Identical to first pop, simply taking the head node
+ * from the passed List, does not return a List or Node
+ */
+void pop_list(List *l, Node *entry) {
+    Node **curr_p;
+    
+    for (curr_p = &l->head; *curr_p; curr_p = &(*curr_p)->next) {
+        if (*curr_p == entry) {
+            *curr_p = (*curr_p)->next;
+            break;
+        }
+    }
+}
+
+/**
  * Assuming before node exists, inserts item utilizing
  * double pointer to the current node (curr_p) for
  * simplification of logic, no additional head logic
